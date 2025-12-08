@@ -1,10 +1,5 @@
 # Crackme Reverse Engineering Challenge
 
-**Hinweis:**
-Da ich aktuell keine Möglichkeit habe, das Programm auf einem Server laufen zu lassen, liegt die Flag-Datei (`flag`) direkt im Repository bei.
-Der eigentliche Spaß und die Herausforderung bestehen darin, die Flag nicht einfach zu lesen, sondern sie durch das Ausnutzen einer Schwachstelle im Crackme-Programm zu erhalten!
-Viel Erfolg beim Exploiten!
-
 **Note:**
 Since I currently do not have the possibility to run the program on a server, the flag file (`flag`) is included directly in the repository.
 The real fun and challenge is not simply reading the flag, but obtaining it by exploiting a vulnerability in the crackme binary!
