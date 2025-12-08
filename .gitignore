@@ -1,0 +1,27 @@
+# Solution files
+SOLUTION.md
+exploit.py
+flag
+crackme.c
+Makefile
+
+# Build artifacts
+*.o
+*.out
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VSCode
+.vscode/
+
+# Editor backups
+*~
+*.swp
+*.swo
+
+# Debugging
+core
+vgcore.*
