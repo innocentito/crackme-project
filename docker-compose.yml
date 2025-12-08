@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  build:
+    image: gcc:latest
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: make
+
+  clean:
+    image: gcc:latest
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: make clean
+
+  compile:
+    image: gcc:latest
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: gcc -m32 -fno-stack-protector -z execstack -no-pie -o crackme crackme.c
+
+  run:
+    image: gcc:latest
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: ./crackme
+
+  exploit:
+    image: gcc:latest
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: sh -c "make && python3 exploit.py"
+
+  shell:
+    image: gcc:latest
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: bash
+    stdin_open: true
+    tty: true
+
+  disasm:
+    image: gcc:latest
+    platform: linux/amd64
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: objdump -d crackme -M intel
