@@ -16,11 +16,6 @@ Makefile
 # VSCode
 .vscode/
 
-# Editor backups
-*~
-*.swp
-*.swo
-
 # Debugging
 core
 vgcore.*
